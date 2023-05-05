@@ -14,3 +14,6 @@
   align-items: center;
   justify-content: center;
 }
+.container {
+  margin: 10px;
+}

@@ -39,15 +39,14 @@
     class="app-sidenav"
   >
     <mat-nav-list>
-      <mat-list-item routerLink="#"><span>Dashboard</span> </mat-list-item>
-      <mat-list-item routerLink="#"><span>Candidate</span> </mat-list-item>
-      <mat-list-item routerLink="#"><span>Employee</span> </mat-list-item>
-      <mat-list-item routerLink="#"><span>Department</span> </mat-list-item>
-      <mat-list-item routerLink="#">
+      <mat-list-item routerLink=""><span>Dashboard</span> </mat-list-item>
+      <mat-list-item routerLink="/candidates"><span>Candidate</span> </mat-list-item>
+      <mat-list-item routerLink="/employees"><span>Employee</span> </mat-list-item>
+      <mat-list-item routerLink="/departments"><span>Department</span> </mat-list-item>
+      <mat-list-item routerLink="/salary">
         <span>Salary</span>
       </mat-list-item>
-      <mat-list-item routerLink="#">
-        <!-- <mat-icon>settings</mat-icon> -->
+      <mat-list-item routerLink="/settings">
         <span>Setting</span>
       </mat-list-item>
       <!-- <mat-expansion-panel [class.mat-elevation-z0]="true">
@@ -72,8 +71,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <router-outlet>
-      <div class="app-sidenav-content">Components open here</div>
-    </router-outlet>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

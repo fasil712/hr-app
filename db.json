@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "Candidates": [
+    {
+      "id": 1,
+      "name": "Aster Kebede",
+      "phone": "+251987654321",
+      "email": "astu@gmail.com",
+      "address": "Addis Ababa"
+    },
+    {
+      "id": 2,
+      "name": "Dereje Bedilu",
+      "phone": "+251988984321",
+      "email": "derie@gmail.com",
+      "address": "Bahir Dar"
+    },
+    {
+      "id": 1,
+      "name": "Aster Kebede",
+      "phone": "+251987654321",
+      "email": "astu@gmail.com",
+      "address": "Addis Ababa"
+    },
+    {
+      "id": 2,
+      "name": "Dereje Bedilu",
+      "phone": "+251988984321",
+      "email": "derie@gmail.com",
+      "address": "Bahir Dar"
+    },
+    {
+      "id": 1,
+      "name": "Aster Kebede",
+      "phone": "+251987654321",
+      "email": "astu@gmail.com",
+      "address": "Addis Ababa"
+    },
+    {
+      "id": 2,
+      "name": "Dereje Bedilu",
+      "phone": "+251988984321",
+      "email": "derie@gmail.com",
+      "address": "Bahir Dar"
+    },
+    {
+      "id": 1,
+      "name": "Aster Kebede",
+      "phone": "+251987654321",
+      "email": "astu@gmail.com",
+      "address": "Addis Ababa"
+    },
+    {
+      "id": 2,
+      "name": "Dereje Bedilu",
+      "phone": "+251988984321",
+      "email": "derie@gmail.com",
+      "address": "Bahir Dar"
+    }
+  ],
+  "Employees": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "Departments": [
+    {
+      "name": "typicode"
+    }
+  ]
+}
