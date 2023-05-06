@@ -44,12 +44,27 @@
     {
       "id": 1,
       "name": "Computer Scinece",
-      "description": "Department Description"
+      "description": "Computer Scinece Description"
     },
     {
       "id": 2,
       "name": "Software Engineering",
       "description": "Department Description"
+    },
+    {
+      "id": 4,
+      "name": "Information Technology",
+      "description": "Information Technology Description"
+    },
+    {
+      "id": 5,
+      "name": "Computer Engineering",
+      "description": "Computer Engineering Description"
+    },
+    {
+      "id": 6,
+      "name": "Information Scinece",
+      "description": "Information Scinece Description"
     }
   ]
 }

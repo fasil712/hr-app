@@ -39,23 +39,15 @@ export class DepartmentComponent implements OnInit {
     this.addEditOperation = AddEditOperation.add;
     this.departmentForm = new FormGroup({
       id: new FormControl(0),
-      name: new FormControl(
-        '',
-        Validators.compose([
-          Validators.required,
-          Validators.minLength(3),
-          Validators.maxLength(15),
-          Validators.pattern('[a-zA-Z ]*'),
-        ])
-      ),
-      description: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      description: new FormControl(''),
     });
   }
 
   get controls() {
     return this.departmentForm.controls;
   }
-  //Have to call our department now
+
   getAllDepartments() {
     this.departmentService.getDepartmentApi().subscribe({
       next: (res: Department[]) => {

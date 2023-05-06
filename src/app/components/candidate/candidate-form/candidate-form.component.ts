@@ -42,9 +42,7 @@ export class CandidateFormComponent implements OnInit {
       this.candidatesForm.controls['email'].setValue(this.editData.email);
       this.candidatesForm.controls['address'].setValue(this.editData.address);
 
-      //Change the update button
       this.actionButton = 'Update';
-      //update header to say "Edit Cadidate"
       this.beginningHeader = 'Edit Cadidate Form';
     }
   }
@@ -52,21 +50,13 @@ export class CandidateFormComponent implements OnInit {
   addCadidate(): void {
     if (!this.editData) {
       if (this.candidatesForm.valid) {
-        //NOTE: THIS IS OBSERVABLE RETURN VALUE SO MUST USE SUBSCRIBE in ANGULAR 13
-        // This is our observer type in our RXJS
         this.candidateService
           .addCandidateApi(this.candidatesForm.value)
           .subscribe({
             next: (res) => {
               console.log(this.candidatesForm.value);
               this.toastr.success('Cadidate added succesfully!', 'SUCCESS');
-              //Reset the candidatesForm when succesfully Cadidate
               this.candidatesForm.reset();
-
-              //Next we import MatDialogReference of type CandidateFormComponent
-              //We then will close the form
-              //NOTE: we need to get a Matdialogreference so we can manipulate the form
-              //NOTE2: add a messsage in close parameter
               this.dialogRef.close('save');
             },
 
