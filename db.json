@@ -15,6 +15,14 @@
       "email": "fasil@gm.com",
       "address": "Addis Ababa",
       "id": 5
+    },
+    {
+      "name": "Maza Mohamed",
+      "gender": "Female",
+      "phone": "0987654321",
+      "email": "mazi@gmail.com",
+      "address": "Addis Ababa ",
+      "id": 6
     }
   ],
   "Employees": [

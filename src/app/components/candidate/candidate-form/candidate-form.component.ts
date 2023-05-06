@@ -44,7 +44,6 @@ export class CandidateFormComponent implements OnInit {
 
       //Change the update button
       this.actionButton = 'Update';
-
       //update header to say "Edit Cadidate"
       this.beginningHeader = 'Edit Cadidate Form';
     }

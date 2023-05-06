@@ -4,7 +4,7 @@
   <!-- bind our form group that we created in code behind/typescript logic-->
   <form [formGroup]="candidatesForm">
     <!--Can go to forms in material.angular.io to check different form fields-->
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" style="margin-top: 8px">
       <mat-label>Full Name</mat-label>
       <input formControlName="name" matInput placeholder="Full Name" />
     </mat-form-field>
@@ -56,7 +56,7 @@
     mat-raised-button
     color="warn"
     mat-dialog-close
-    style="margin-left: 8px"
+    style="margin-left: 8px; margin-right: 25px"
   >
     Cancel
   </button>

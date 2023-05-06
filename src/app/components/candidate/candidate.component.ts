@@ -8,6 +8,7 @@ import { Candidate } from 'src/app/models/candidate';
 import { CandidateService } from 'src/app/services/candidate.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CandidateFormComponent } from './candidate-form/candidate-form.component';
+import { noop } from 'rxjs';
 
 @Component({
   selector: 'app-candidate',
@@ -42,6 +43,7 @@ export class CandidateComponent implements OnInit {
     this.dialog
       .open(CandidateFormComponent, {
         width: '30%',
+        height: '85%'
       })
       .afterClosed()
       .subscribe((val) => {
