@@ -18,7 +18,8 @@
   color: #3f51b5;
 }
 .active {
-  background-color: #3f51b5 !important;
+  background-color: #dedede !important;
   color: white !important;
   border-radius: 2px;
+  display: flex;
 }

@@ -12,6 +12,8 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialsModule } from './materials/materials.module';
+import { CandidateFormComponent } from './components/candidate/candidate-form/candidate-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { MaterialsModule } from './materials/materials.module';
     CandidateComponent,
     EmployeeComponent,
     DepartmentComponent,
+    CandidateFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +34,7 @@ import { MaterialsModule } from './materials/materials.module';
       progressAnimation: 'increasing',
       preventDuplicates: true,
     }),
+    ReactiveFormsModule,
     HttpClientModule,
     MaterialsModule,
   ],

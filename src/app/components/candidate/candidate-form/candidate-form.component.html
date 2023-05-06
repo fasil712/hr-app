@@ -1,0 +1,63 @@
+<!-- Hard Code these values: -->
+<h1 mat-dialog-title>{{ beginningHeader }}</h1>
+<div mat-dialog-content>
+  <!-- bind our form group that we created in code behind/typescript logic-->
+  <form [formGroup]="candidatesForm">
+    <!--Can go to forms in material.angular.io to check different form fields-->
+    <mat-form-field appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input formControlName="name" matInput placeholder="Full Name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender" placeholder="Gender">
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+        <mat-option value="Other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Phone Number</mat-label>
+      <input
+        formControlName="phone"
+        type="tel"
+        matInput
+        placeholder="Phone Number"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email Address</mat-label>
+      <input
+        formControlName="email"
+        type="email"
+        matInput
+        placeholder="Email Address"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input
+        formControlName="address"
+        type="text"
+        matInput
+        placeholder="Address"
+      />
+    </mat-form-field>
+  </form>
+</div>
+<!-- This is for our buttons aka: save or cancel candidates-->
+<!-- align used to have it below -->
+<div mat-dialog-action [align]="'end'">
+  <!--We use Mat-dialogclose for our cancel button, aka closing our box-->
+  <button mat-raised-button color="primary" (click)="addCadidate()">
+    {{ actionButton }}
+  </button>
+  <button
+    mat-raised-button
+    color="warn"
+    mat-dialog-close
+    style="margin-left: 8px"
+  >
+    Cancel
+  </button>
+</div>

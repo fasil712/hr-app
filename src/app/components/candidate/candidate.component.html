@@ -1,21 +1,15 @@
-<div class="button-container">
-  <mat-form-field>
-    <input
-      matInput
-      (keyup)="applyFilter($event)"
-      placeholder="Search ..."
-      #input
-    />
-  </mat-form-field>
-  <button
-    mat-raised-button
-    color="accent"
-    (click)="addData()"
-    class="button"
-  >
-    Add data
-  </button>
-</div>
+<mat-form-field style="height: 70px">
+  <input
+    matInput
+    (keyup)="applyFilter($event)"
+    placeholder="Search ..."
+    #input
+  />
+</mat-form-field>
+<button mat-raised-button color="accent" (click)="openDialog()" class="button">
+  Add data
+</button>
+<!-- <div class="button-container"></div> -->
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
@@ -29,6 +23,12 @@
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
       <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+    </ng-container>
+
+    <!-- Gender Column -->
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Gender</th>
+      <td mat-cell *matCellDef="let row">{{ row.gender }}</td>
     </ng-container>
 
     <!-- Phone Column -->
@@ -47,6 +47,20 @@
     <ng-container matColumnDef="address">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Address</th>
       <td mat-cell *matCellDef="let row">{{ row.address }}</td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef>Action</th>
+      <td mat-cell *matCellDef="let row">
+        <!--Added our edit and delete buttons to this row-->
+        <button mat-icon-button color="primary" (click)="editCandidate(row)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button color="warn" (click)="deleteCandidate(row.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

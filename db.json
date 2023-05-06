@@ -1,60 +1,20 @@
 {
   "Candidates": [
     {
-      "id": 1,
+      "id": 4,
       "name": "Aster Kebede",
-      "phone": "+251987654321",
+      "gender": "Female",
+      "phone": "0987612345",
       "email": "astu@gmail.com",
       "address": "Addis Ababa"
     },
     {
-      "id": 2,
-      "name": "Dereje Bedilu",
-      "phone": "+251988984321",
-      "email": "derie@gmail.com",
-      "address": "Bahir Dar"
-    },
-    {
-      "id": 1,
-      "name": "Aster Kebede",
-      "phone": "+251987654321",
-      "email": "astu@gmail.com",
-      "address": "Addis Ababa"
-    },
-    {
-      "id": 2,
-      "name": "Dereje Bedilu",
-      "phone": "+251988984321",
-      "email": "derie@gmail.com",
-      "address": "Bahir Dar"
-    },
-    {
-      "id": 1,
-      "name": "Aster Kebede",
-      "phone": "+251987654321",
-      "email": "astu@gmail.com",
-      "address": "Addis Ababa"
-    },
-    {
-      "id": 2,
-      "name": "Dereje Bedilu",
-      "phone": "+251988984321",
-      "email": "derie@gmail.com",
-      "address": "Bahir Dar"
-    },
-    {
-      "id": 1,
-      "name": "Aster Kebede",
-      "phone": "+251987654321",
-      "email": "astu@gmail.com",
-      "address": "Addis Ababa"
-    },
-    {
-      "id": 2,
-      "name": "Dereje Bedilu",
-      "phone": "+251988984321",
-      "email": "derie@gmail.com",
-      "address": "Bahir Dar"
+      "name": "Fasil Getie",
+      "gender": "Male",
+      "phone": "0987654321",
+      "email": "fasil@gm.com",
+      "address": "Addis Abab",
+      "id": 5
     }
   ],
   "Employees": [
