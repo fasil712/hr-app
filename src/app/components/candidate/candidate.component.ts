@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import Swal from 'sweetalert2';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -81,16 +82,36 @@ export class CandidateComponent implements OnInit {
   }
 
   deleteCandidate(id: any) {
-    this.candidateService.deleteCandidateApi(id).subscribe({
-      next: (res) => {
-        this.getAllCandidates();
+    Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger',
       },
-      error: (err) => {
-        this.toastr.error(
-          'Something went wrong with deletion of the Candidate!',
-          'ERROR'
-        );
-      },
+      buttonsStyling: false,
+    });
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it',
+      cancelButtonText: 'No, cancel',
+      reverseButtons: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.candidateService.deleteCandidateApi(id).subscribe({
+          next: (res) => {
+            this.toastr.success('Cadidate deleted succesfully!', 'SUCCESS');
+            this.getAllCandidates();
+          },
+          error: (err) => {
+            this.toastr.error(
+              'Something went wrong with deletion of the Candidate!',
+              'ERROR'
+            );
+          },
+        });
+      }
     });
   }
   applyFilter(event: Event) {

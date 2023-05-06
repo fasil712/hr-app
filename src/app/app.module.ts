@@ -14,6 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MaterialsModule } from './materials/materials.module';
 import { CandidateFormComponent } from './components/candidate/candidate-form/candidate-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CandidateService } from './services/candidate.service';
+import { EmployeeService } from './services/employee.service';
+import { DepartmentService } from './services/department.service';
+import { SalaryService } from './services/salary.service';
+import { SettingService } from './services/setting.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MaterialsModule,
   ],
-  providers: [],
+  providers: [
+    CandidateService,
+    EmployeeService,
+    DepartmentService,
+    SalaryService,
+    SettingService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

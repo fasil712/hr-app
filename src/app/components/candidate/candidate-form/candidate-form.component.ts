@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core'; //need to include inject as well
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'; //MUST IMPORT MAT_DIALOG_DATA as well to import valuse into our dialog box
+import { ToastrService } from 'ngx-toastr';
 import { CandidateService } from 'src/app/services/candidate.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class CandidateFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private candidateService: CandidateService,
+    private toastr: ToastrService,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private dialogRef: MatDialogRef<CandidateFormComponent>
   ) {}
@@ -50,9 +52,6 @@ export class CandidateFormComponent implements OnInit {
 
   addCadidate(): void {
     if (!this.editData) {
-      //Check that the Cadidate form is binding
-      console.log(this.candidatesForm.value);
-
       if (this.candidatesForm.valid) {
         //NOTE: THIS IS OBSERVABLE RETURN VALUE SO MUST USE SUBSCRIBE in ANGULAR 13
         // This is our observer type in our RXJS
@@ -60,11 +59,12 @@ export class CandidateFormComponent implements OnInit {
           .addCandidateApi(this.candidatesForm.value)
           .subscribe({
             next: (res) => {
-              alert('Cadidate added succesfully!');
-              //Reset the prodcutForm when succesfully Cadidate
+              console.log(this.candidatesForm.value);
+              this.toastr.success('Cadidate added succesfully!', 'SUCCESS');
+              //Reset the candidatesForm when succesfully Cadidate
               this.candidatesForm.reset();
 
-              //Next we import MatDialogReference of type DialogComponent
+              //Next we import MatDialogReference of type CandidateFormComponent
               //We then will close the form
               //NOTE: we need to get a Matdialogreference so we can manipulate the form
               //NOTE2: add a messsage in close parameter
@@ -72,7 +72,7 @@ export class CandidateFormComponent implements OnInit {
             },
 
             error: () => {
-              alert('Error while adding the Cadidate');
+              this.toastr.error('Error while adding the Cadidate', 'ERROR');
             },
           });
       } else {
@@ -86,7 +86,7 @@ export class CandidateFormComponent implements OnInit {
           .updateCandidateApi(this.editData.id, this.candidatesForm.value)
           .subscribe({
             next: (res) => {
-              alert('Cadidate edited succesfully!');
+              this.toastr.success('Cadidate edited succesfully!', 'SUCCESS');
               //Reset the prodcutForm when succesfully Cadidate
               this.candidatesForm.reset();
 
@@ -98,7 +98,7 @@ export class CandidateFormComponent implements OnInit {
             },
 
             error: () => {
-              alert('Error while editing the Cadidate');
+              this.toastr.error('Error while editing the Cadidate', 'ERROR');
             },
           });
       } else {
