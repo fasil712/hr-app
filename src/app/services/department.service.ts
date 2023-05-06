@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../environments/environment';
 import { ApiPaths } from '../api-paths.enum';
+import { Department } from '../models/department';
 
 @Injectable({
   providedIn: 'root',
@@ -12,9 +13,15 @@ export class DepartmentService {
   constructor(private httpClient: HttpClient) {}
 
   //post Add Department
-  addDepartmentApi(Department: any): Observable<any> {
+  addDepartmentApi(Department: Department): Observable<any> {
     return this.httpClient
       .post(this.BASE_URL + ApiPaths.DepartmentEndpoint, Department)
+      .pipe(catchError(this.errorHandler));
+  }
+  //View list of Department By Id
+  getDepartmentByIdApi(id: number | string): Observable<any> {
+    return this.httpClient
+      .get(this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${id}`)
       .pipe(catchError(this.errorHandler));
   }
   //View list of Department
@@ -24,9 +31,12 @@ export class DepartmentService {
       .pipe(catchError(this.errorHandler));
   }
   //View Department by id
-  updateDepartmentApi(id: number | string, Department: any): Observable<any> {
+  updateDepartmentApi(Department: Department): Observable<any> {
     return this.httpClient
-      .put(this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${id}`, Department)
+      .put(
+        this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${Department.id}`,
+        Department
+      )
       .pipe(catchError(this.errorHandler));
   }
   //Delete Department by id

@@ -8,7 +8,6 @@ import { Candidate } from 'src/app/models/candidate';
 import { CandidateService } from 'src/app/services/candidate.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CandidateFormComponent } from './candidate-form/candidate-form.component';
-import { noop } from 'rxjs';
 
 @Component({
   selector: 'app-candidate',
@@ -83,7 +82,7 @@ export class CandidateComponent implements OnInit {
       });
   }
 
-  deleteCandidate(id: any) {
+  deleteCandidate(id: number) {
     Swal.mixin({
       customClass: {
         confirmButton: 'btn btn-success',

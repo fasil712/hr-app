@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.mat-card-left {
+  width: 30%;
+}
+.mat-card-right {
+  width: 68%;
+}
+mat-form-field {
+  width: 100%;
+}

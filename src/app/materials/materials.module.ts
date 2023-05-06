@@ -14,7 +14,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatBadgeModule } from '@angular/material/badge';
 @NgModule({
   imports: [
     MatToolbarModule,
@@ -31,6 +32,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSortModule,
     MatSelectModule,
     MatDialogModule,
+    MatCardModule,
+    MatBadgeModule,
   ],
   exports: [
     MatToolbarModule,
@@ -47,6 +50,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSortModule,
     MatSelectModule,
     MatDialogModule,
+    MatCardModule,
+    MatBadgeModule,
   ],
 })
 export class MaterialsModule {}

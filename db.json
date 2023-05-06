@@ -42,7 +42,14 @@
   ],
   "Departments": [
     {
-      "name": "typicode"
+      "id": 1,
+      "name": "Computer Scinece",
+      "description": "Department Description"
+    },
+    {
+      "id": 2,
+      "name": "Software Engineering",
+      "description": "Department Description"
     }
   ]
 }
