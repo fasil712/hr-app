@@ -5,4 +5,8 @@ export enum ApiPaths {
   EmployeeEndpoint = '/Employees',
   //Department endpoint
   DepartmentEndpoint = '/Departments',
+  //Salary endpoint
+  SalaryEndpoint = '/Salarys',
+  //Setting endpoint
+  SettingEndpoint = '/Settings',
 }

@@ -1,25 +1,21 @@
-<div class="demo-button-container">
+<div class="button-container">
+  <mat-form-field>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Search ..."
+      #input
+    />
+  </mat-form-field>
   <button
     mat-raised-button
     color="accent"
     (click)="addData()"
-    class="demo-button"
+    class="button"
   >
     Add data
   </button>
-  <button
-    mat-raised-button
-    color="warn"
-    (click)="removeData()"
-    class="demo-button"
-  >
-    Remove data
-  </button>
 </div>
-<mat-form-field>
-  <mat-label>Search ...</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input />
-</mat-form-field>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>

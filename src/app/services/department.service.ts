@@ -1,0 +1,48 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { catchError, Observable, throwError } from 'rxjs';
+import { environment } from '../environments/environment';
+import { ApiPaths } from '../api-paths.enum';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class DepartmentService {
+  BASE_URL = environment.baseUrl;
+  constructor(private httpClient: HttpClient) {}
+
+  //post Add Department
+  addDepartmentApi(Department: any): Observable<any> {
+    return this.httpClient
+      .post(this.BASE_URL + ApiPaths.DepartmentEndpoint, Department)
+      .pipe(catchError(this.errorHandler));
+  }
+  //View list of Department
+  getDepartmentApi(): Observable<any> {
+    return this.httpClient
+      .get(this.BASE_URL + ApiPaths.DepartmentEndpoint)
+      .pipe(catchError(this.errorHandler));
+  }
+  //View Department by id
+  updateDepartmentApi(id: number | string, Department: any): Observable<any> {
+    return this.httpClient
+      .put(this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${id}`, Department)
+      .pipe(catchError(this.errorHandler));
+  }
+  //Delete Department by id
+  deleteDepartmentApi(id: number | string): Observable<any> {
+    return this.httpClient
+      .delete(this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${id}`)
+      .pipe(catchError(this.errorHandler));
+  }
+
+  errorHandler(error: any) {
+    let errorMessage = '';
+    if (error.error instanceof ErrorEvent) {
+      errorMessage = error.error.message;
+    } else {
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    return throwError(errorMessage);
+  }
+}
