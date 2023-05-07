@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../environments/environment';
-import { ApiPaths } from '../api-paths.enum';
+import { ApiPaths } from '../others/api-paths.enum';
+import { Salary } from '../models/salary';
 
 @Injectable({
   providedIn: 'root',
@@ -12,9 +13,9 @@ export class SalaryService {
   constructor(private httpClient: HttpClient) {}
 
   //post Add Salary
-  addSalaryApi(Salary: any): Observable<any> {
+  addSalaryApi(salary: any): Observable<any> {
     return this.httpClient
-      .post(this.BASE_URL + ApiPaths.SalaryEndpoint, Salary)
+      .post(this.BASE_URL + ApiPaths.SalaryEndpoint, salary)
       .pipe(catchError(this.errorHandler));
   }
   //View list of Salary
@@ -23,10 +24,17 @@ export class SalaryService {
       .get(this.BASE_URL + ApiPaths.SalaryEndpoint)
       .pipe(catchError(this.errorHandler));
   }
-  //View Salary by id
-  updateSalaryApi(id: number | string, Salary: any): Observable<any> {
+
+  //View list of Salary
+  getSalaryByIdApi(id: number | string): Observable<any> {
     return this.httpClient
-      .put(this.BASE_URL + ApiPaths.SalaryEndpoint + `/${id}`, Salary)
+      .get(this.BASE_URL + ApiPaths.SalaryEndpoint + `/${id}`)
+      .pipe(catchError(this.errorHandler));
+  }
+  //View Salary by id
+  updateSalaryApi(salary: Salary): Observable<any> {
+    return this.httpClient
+      .put(this.BASE_URL + ApiPaths.SalaryEndpoint + `/${salary.id}`, salary)
       .pipe(catchError(this.errorHandler));
   }
   //Delete Salary by id

@@ -1,8 +1,6 @@
-<!-- Hard Code these values: -->
 <h1 mat-dialog-title>{{ beginningHeader }}</h1>
 <div mat-dialog-content>
-  <form [formGroup]="candidatesForm">
-    <!--Can go to forms in material.angular.io to check different form fields-->
+  <form [formGroup]="employeeForm">
     <mat-form-field appearance="outline" style="margin-top: 8px">
       <mat-label>Full Name</mat-label>
       <input formControlName="name" matInput placeholder="Full Name" />
@@ -42,10 +40,21 @@
         placeholder="Address"
       />
     </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Department</mat-label>
+      <mat-select formControlName="departmentId" placeholder="Department">
+        <mat-option
+          *ngFor="let item of departmentList | async"
+          [value]="item.id"
+          >{{ item.name }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
   </form>
 </div>
+
 <div mat-dialog-action [align]="'end'">
-  <button mat-raised-button color="accent" (click)="addCadidate()">
+  <button mat-raised-button color="accent" (click)="addEmployee()">
     {{ actionButton }}
   </button>
   <button

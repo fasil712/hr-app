@@ -52,12 +52,10 @@ export class CandidateComponent implements OnInit {
       });
   }
 
-  //Have to call our Candidates now
   getAllCandidates() {
     this.candidateService.getCandidateApi().subscribe({
       next: (res: Candidate[]) => {
         this.dataSource = new MatTableDataSource(res);
-        //Assign our pagination and sort from our ViewChild elements that we declared
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },
@@ -71,7 +69,7 @@ export class CandidateComponent implements OnInit {
     this.dialog
       .open(CandidateFormComponent, {
         width: '30%',
-        //We need to pass the data value
+        height: '85%',
         data: row,
       })
       .afterClosed()

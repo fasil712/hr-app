@@ -9,7 +9,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: 'candidates',
     pathMatch: 'full',
   },
   {

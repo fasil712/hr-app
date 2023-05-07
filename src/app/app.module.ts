@@ -11,7 +11,6 @@ import { CandidateComponent } from './components/candidate/candidate.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialsModule } from './materials/materials.module';
 import { CandidateFormComponent } from './components/candidate/candidate-form/candidate-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CandidateService } from './services/candidate.service';
@@ -19,6 +18,10 @@ import { EmployeeService } from './services/employee.service';
 import { DepartmentService } from './services/department.service';
 import { SalaryService } from './services/salary.service';
 import { SettingService } from './services/setting.service';
+import { MaterialsModule } from './others/materials.module';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SalaryComponent } from './components/salary/salary.component';
+import { EmployeeFormComponent } from './components/employee/employee-form/employee-form.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +30,17 @@ import { SettingService } from './services/setting.service';
     CandidateComponent,
     EmployeeComponent,
     DepartmentComponent,
+    SettingsComponent,
+    SalaryComponent,
     CandidateFormComponent,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
-      timeOut: 4000,
+      timeOut: 3000,
       progressBar: true,
       progressAnimation: 'increasing',
       preventDuplicates: true,
@@ -43,6 +49,7 @@ import { SettingService } from './services/setting.service';
     HttpClientModule,
     MaterialsModule,
   ],
+
   providers: [
     CandidateService,
     EmployeeService,

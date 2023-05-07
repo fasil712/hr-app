@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../environments/environment';
-import { ApiPaths } from '../api-paths.enum';
+import { ApiPaths } from '../others/api-paths.enum';
+import { Employee } from '../models/employee';
 
 @Injectable({
   providedIn: 'root',
@@ -12,27 +13,33 @@ export class EmployeeService {
   constructor(private httpClient: HttpClient) {}
 
   //post Add Employee
-  addEmployeeApi(Employee: any): Observable<any> {
+  addEmployeeApi(employee: Employee): Observable<Employee[]> {
     return this.httpClient
-      .post(this.BASE_URL + ApiPaths.EmployeeEndpoint, Employee)
+      .post<Employee[]>(this.BASE_URL + ApiPaths.EmployeeEndpoint, employee)
       .pipe(catchError(this.errorHandler));
   }
   //View list of Employee
-  getEmployeeApi(): Observable<any> {
+  getEmployeeApi(): Observable<Employee[]> {
     return this.httpClient
-      .get(this.BASE_URL + ApiPaths.EmployeeEndpoint)
+      .get<Employee[]>(this.BASE_URL + ApiPaths.EmployeeEndpoint)
       .pipe(catchError(this.errorHandler));
   }
   //View Employee by id
-  updateEmployeeApi(id: number | string, Employee: any): Observable<any> {
+  updateEmployeeApi(
+    id: number | string,
+    employee: Employee
+  ): Observable<Employee[]> {
     return this.httpClient
-      .put(this.BASE_URL + ApiPaths.EmployeeEndpoint + `/${id}`, Employee)
+      .put<Employee[]>(
+        this.BASE_URL + ApiPaths.EmployeeEndpoint + `/${id}`,
+        employee
+      )
       .pipe(catchError(this.errorHandler));
   }
   //Delete Employee by id
-  deleteEmployeeApi(id: number | string): Observable<any> {
+  deleteEmployeeApi(id: number | string): Observable<Employee[]> {
     return this.httpClient
-      .delete(this.BASE_URL + ApiPaths.EmployeeEndpoint + `/${id}`)
+      .delete<Employee[]>(this.BASE_URL + ApiPaths.EmployeeEndpoint + `/${id}`)
       .pipe(catchError(this.errorHandler));
   }
 

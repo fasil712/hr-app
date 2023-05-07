@@ -13,7 +13,7 @@
       "gender": "Male",
       "phone": "0987654321",
       "email": "fasil@gm.com",
-      "address": "Addis Ababa",
+      "address": "Adama",
       "id": 5
     },
     {
@@ -21,23 +21,88 @@
       "gender": "Female",
       "phone": "0987654321",
       "email": "mazi@gmail.com",
-      "address": "Addis Ababa ",
+      "address": "Bahir Dar",
       "id": 6
     }
   ],
   "Employees": [
     {
-      "name": "typicode"
+      "name": "Fasil Getie",
+      "gender": "Male",
+      "phone": "0987654321",
+      "email": "fasil@gmail.com",
+      "address": "Bole, Gerji",
+      "departmentId": 2,
+      "id": 1
+    },
+    {
+      "name": "Abebe Dereje",
+      "gender": "Male",
+      "phone": "0987661234",
+      "email": "abe@gmail.com",
+      "address": "Addis Ababa",
+      "departmentId": 5,
+      "id": 2
+    },
+    {
+      "name": "Hana Sisay",
+      "gender": "Female",
+      "phone": "0987623455",
+      "email": "hana@gmail.com",
+      "address": "Bole, Gerji",
+      "departmentId": 4,
+      "id": 3
+    },
+    {
+      "name": "Abcd Dedf",
+      "gender": "Female",
+      "phone": "0987654321",
+      "email": "abc@gmail.com",
+      "address": "Bole, Gerji",
+      "departmentId": 4,
+      "id": 4
     }
   ],
   "Settings": [
     {
-      "name": "typicode"
+      "id": 1,
+      "name": "XOKA IT Solutions PLC",
+      "phone": "+25132432123",
+      "email": "xoka.it.sol@gmail.com",
+      "address": "Dembel City, Addis Ababa",
+      "note": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quod? Vero maiores ipsum quod tempore tenetur autem distinctio consequatur necessitatibus!. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quod? Vero maiores ipsum quod tempore tenetur autem distinctio consequatur necessitatibus."
     }
   ],
-  "Salary": [
+  "Salaries": [
     {
-      "name": "typicode"
+      "id": 1,
+      "employeeId": 1,
+      "salary": 1230,
+      "description": "Developers Salary"
+    },
+    {
+      "id": 2,
+      "employeeId": 2,
+      "salary": 5432,
+      "description": "Manages Salary"
+    },
+    {
+      "id": 3,
+      "employeeId": 3,
+      "salary": 765,
+      "description": "Secretaries Salary"
+    },
+    {
+      "id": 4,
+      "employeeId": 1,
+      "salary": 5432,
+      "description": "Demo Salary"
+    },
+    {
+      "id": 5,
+      "employeeId": 2,
+      "salary": 4321,
+      "description": "Demo Salary"
     }
   ],
   "Departments": [
@@ -65,6 +130,31 @@
       "id": 6,
       "name": "Information Scinece",
       "description": "Information Scinece Description"
+    },
+    {
+      "id": 7,
+      "name": "IU",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "name": "HJK",
+      "description": null
+    },
+    {
+      "id": 9,
+      "name": "HHU",
+      "description": null
+    },
+    {
+      "id": 10,
+      "name": "HIO",
+      "description": null
+    },
+    {
+      "id": 11,
+      "name": "LIP",
+      "description": null
     }
   ]
 }

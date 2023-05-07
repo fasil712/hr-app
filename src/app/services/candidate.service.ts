@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../environments/environment';
-import { ApiPaths } from '../api-paths.enum';
+import { ApiPaths } from '../others/api-paths.enum';
 import { Candidate } from '../models/candidate';
 
 @Injectable({
@@ -13,9 +13,9 @@ export class CandidateService {
   constructor(private httpClient: HttpClient) {}
 
   //Add Candidate
-  addCandidateApi(Candidate: any): Observable<Candidate[]> {
+  addCandidateApi(candidate: Candidate): Observable<Candidate[]> {
     return this.httpClient
-      .post<Candidate[]>(this.BASE_URL + ApiPaths.CandidateEndpoint, Candidate)
+      .post<Candidate[]>(this.BASE_URL + ApiPaths.CandidateEndpoint, candidate)
       .pipe(catchError(this.errorHandler));
   }
   //View list of Candidate
@@ -27,12 +27,12 @@ export class CandidateService {
   //Update Candidate by id
   updateCandidateApi(
     id: number | string,
-    Candidate: any
+    candidate: Candidate
   ): Observable<Candidate[]> {
     return this.httpClient
       .put<Candidate[]>(
         this.BASE_URL + ApiPaths.CandidateEndpoint + `/${id}`,
-        Candidate
+        candidate
       )
       .pipe(catchError(this.errorHandler));
   }

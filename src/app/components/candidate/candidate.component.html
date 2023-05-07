@@ -1,14 +1,21 @@
-<mat-form-field style="height: 70px">
-  <input
-    matInput
-    (keyup)="applyFilter($event)"
-    placeholder="Search ..."
-    #input
-  />
-</mat-form-field>
-<button mat-raised-button color="accent" (click)="openDialog()" class="button">
-  <mat-icon>add</mat-icon> Candidate
-</button>
+<div class="container">
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Search ..."
+      #input
+    />
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="openDialog()"
+    class="button"
+  >
+    <mat-icon>add</mat-icon> Candidate
+  </button>
+</div>
 
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>

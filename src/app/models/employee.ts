@@ -1,5 +1,4 @@
 import { Department } from './department';
-import { Salary } from './salary';
 
 export interface Employee {
   id: number;
@@ -7,6 +6,5 @@ export interface Employee {
   phone: string;
   email: string;
   address: string;
-  department: Department;
-  salary: Salary;
+  departmentId: Department;
 }

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { environment } from '../environments/environment';
-import { ApiPaths } from '../api-paths.enum';
+import { ApiPaths } from '../others/api-paths.enum';
 import { Department } from '../models/department';
 
 @Injectable({
@@ -13,9 +13,9 @@ export class DepartmentService {
   constructor(private httpClient: HttpClient) {}
 
   //post Add Department
-  addDepartmentApi(Department: Department): Observable<any> {
+  addDepartmentApi(department: Department): Observable<any> {
     return this.httpClient
-      .post(this.BASE_URL + ApiPaths.DepartmentEndpoint, Department)
+      .post(this.BASE_URL + ApiPaths.DepartmentEndpoint, department)
       .pipe(catchError(this.errorHandler));
   }
   //View list of Department By Id
@@ -31,11 +31,11 @@ export class DepartmentService {
       .pipe(catchError(this.errorHandler));
   }
   //View Department by id
-  updateDepartmentApi(Department: Department): Observable<any> {
+  updateDepartmentApi(department: Department): Observable<any> {
     return this.httpClient
       .put(
-        this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${Department.id}`,
-        Department
+        this.BASE_URL + ApiPaths.DepartmentEndpoint + `/${department.id}`,
+        department
       )
       .pipe(catchError(this.errorHandler));
   }
