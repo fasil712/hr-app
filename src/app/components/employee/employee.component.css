@@ -10,9 +10,6 @@ table {
   justify-content: space-between;
 }
 
-/* .search-form {
-  width: 90%;
-  height: 40px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-} */
+.search-form-field mat-icon {
+  color: #9e9e9e;
+}

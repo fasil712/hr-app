@@ -13,10 +13,22 @@
             }}</mat-option>
           </mat-select>
         </mat-form-field>
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Salary</mat-label>
+          <input
+            matInput
+            class="right-align"
+            formControlName="salary"
+            type="number"
+            min="0"
+          />
+          <span matTextPrefix>$&nbsp;</span>
+          <span matTextSuffix>.00</span>
+        </mat-form-field>
+        <!-- <mat-form-field appearance="outline">
           <mat-label>Salary</mat-label>
           <input matInput formControlName="salary" type="number" min="0" />
-        </mat-form-field>
+        </mat-form-field> -->
         <mat-form-field appearance="outline">
           <mat-label>Description</mat-label>
           <textarea matInput formControlName="description"></textarea>
@@ -103,7 +115,7 @@
             <td class="mat-cell" colspan="4">No data</td>
           </tr>
         </table>
-        
+
         <mat-paginator
           [pageSizeOptions]="[5, 10, 25, 100]"
           aria-label="Select page of users"

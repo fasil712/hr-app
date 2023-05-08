@@ -33,7 +33,7 @@ export class EmployeeComponent implements OnInit {
 
   departmentList: any[] = [];
   departmentListMap: Map<number, string> = new Map();
-  isLoading: boolean = false;
+  isLoading: boolean = false
 
   constructor(
     private employeeService: EmployeeService,
@@ -68,7 +68,7 @@ export class EmployeeComponent implements OnInit {
         this.dataSource.sort = this.sort;
       },
       error: (err) => {
-        this.isLoading = true;
+        alert('Error while fetching Employee List');
       },
     });
   }

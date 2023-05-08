@@ -11,14 +11,10 @@
 .container {
   margin: 10px;
 }
-.mat-icon {
+.sidenav-icon {
   margin-right: 10px;
 }
-/* .mdc-list-item {
-  color: #3f51b5;
-} */
 .active {
   background-color: #3f51b5 !important;
   color: white !important;
-  border-radius: 2px;
 }

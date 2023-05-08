@@ -74,7 +74,7 @@ export class SalaryComponent implements OnInit {
       },
     });
   }
-
+  
   getEmployees() {
     this.employeeService.getEmployeeApi().subscribe((res: Employee[]) => {
       this.employeeList = res;

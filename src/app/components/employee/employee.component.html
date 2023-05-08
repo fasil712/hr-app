@@ -1,11 +1,12 @@
 <div class="container">
-  <mat-form-field appearance="outline" class="search-form">
+  <mat-form-field appearance="outline" class="search-form-field">
     <input
       matInput
       (keyup)="applyFilter($event)"
       placeholder="Search ..."
       #input
     />
+    <mat-icon matPrefix>search</mat-icon>
   </mat-form-field>
   <button
     mat-raised-button
