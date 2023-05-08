@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-form-field appearance="outline" class="search-fileld">
+  <mat-form-field appearance="outline" class="search-form">
     <input
       matInput
       (keyup)="applyFilter($event)"
@@ -78,7 +78,9 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-
+    <tr class="mat-row" *ngIf="isLoading">
+      <mat-spinner></mat-spinner>
+    </tr>
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="5">
         No data matching the filter "{{ input.value }}"

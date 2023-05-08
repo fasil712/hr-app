@@ -5,13 +5,14 @@
 table {
   width: 100%;
 }
-
-.mat-mdc-form-field {
-  width: 90%;
-}
-
 .container {
   display: flex;
   justify-content: space-between;
 }
 
+/* .search-form {
+  width: 90%;
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+} */

@@ -10,10 +10,6 @@
 table {
   width: 100%;
 }
-
-.mat-mdc-form-field {
-  width: 90%;
-}
 .container {
   display: flex;
   justify-content: space-between;
