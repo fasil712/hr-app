@@ -9,7 +9,7 @@ import { DepartmentService } from 'src/app/services/department.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-department',
+  selector: 'department',
   templateUrl: './department.component.html',
   styleUrls: ['./department.component.css'],
 })

@@ -45,7 +45,6 @@ export class SalaryComponent implements OnInit {
     this.getEmployeeSalaries();
     this.setupFormGroups();
     this.getEmployees();
-    this.getEmployeeMap();
   }
 
   setupFormGroups() {
@@ -78,12 +77,6 @@ export class SalaryComponent implements OnInit {
 
   getEmployees() {
     this.employeeService.getEmployeeApi().subscribe((res: Employee[]) => {
-      this.employeeList = res;
-    });
-  }
-
-  getEmployeeMap() {
-    this.employeeService.getEmployeeApi().subscribe((res) => {
       this.employeeList = res;
       for (let i = 0; i < res.length; i++) {
         this.employeeListMap.set(

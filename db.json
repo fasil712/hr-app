@@ -54,23 +54,32 @@
       "id": 3
     },
     {
-      "name": "Abcd Dedf",
+      "name": "Abay Molla",
       "gender": "Female",
       "phone": "0987654321",
-      "email": "abc@gmail.com",
-      "address": "Bole, Gerji",
-      "departmentId": 4,
+      "email": "abd@gmail.com",
+      "address": "Bahir Dar",
+      "departmentId": 2,
       "id": 4
+    },
+    {
+      "name": "Fasil Getie",
+      "gender": "Male",
+      "phone": "12345676876",
+      "email": "fasilgetie12@gmail.com",
+      "address": "Bole, Gerji",
+      "departmentId": 1,
+      "id": 5
     }
   ],
   "Settings": [
     {
       "id": 1,
-      "name": "XOKA IT Solutions PLC",
-      "phone": "+25132432123",
-      "email": "xoka.it.sol@gmail.com",
-      "address": "Dembel City, Addis Ababa",
-      "note": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quod? Vero maiores ipsum quod tempore tenetur autem distinctio consequatur necessitatibus!. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, quod? Vero maiores ipsum quod tempore tenetur autem distinctio consequatur necessitatibus."
+      "name": "Creavers Service PLC",
+      "phone": "0987654321",
+      "email": "creavers@gmail.com",
+      "address": "Bole, Gerji",
+      "note": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, similique, facere ab temporibus ipsam dolore asperiores ducimus hic reprehenderit, dolorem corporis praesentium a consequatur repellendus quidem nam quod quos sunt!"
     }
   ],
   "Salaries": [
@@ -84,7 +93,7 @@
       "id": 2,
       "employeeId": 2,
       "salary": 5432,
-      "description": "Manages Salary"
+      "description": "Managers Salary"
     },
     {
       "id": 3,
@@ -94,15 +103,9 @@
     },
     {
       "id": 4,
-      "employeeId": 1,
-      "salary": 5432,
-      "description": "Demo Salary"
-    },
-    {
-      "id": 5,
-      "employeeId": 2,
-      "salary": 4321,
-      "description": "Demo Salary"
+      "employeeId": 4,
+      "salary": 400,
+      "description": "Description"
     }
   ],
   "Departments": [
@@ -130,31 +133,6 @@
       "id": 6,
       "name": "Information Scinece",
       "description": "Information Scinece Description"
-    },
-    {
-      "id": 7,
-      "name": "IU",
-      "description": ""
-    },
-    {
-      "id": 8,
-      "name": "HJK",
-      "description": null
-    },
-    {
-      "id": 9,
-      "name": "HHU",
-      "description": null
-    },
-    {
-      "id": 10,
-      "name": "HIO",
-      "description": null
-    },
-    {
-      "id": 11,
-      "name": "LIP",
-      "description": null
     }
   ]
 }

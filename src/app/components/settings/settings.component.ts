@@ -5,7 +5,7 @@ import { Setting } from 'src/app/models/setting';
 import { SettingService } from 'src/app/services/setting.service';
 
 @Component({
-  selector: 'app-settings',
+  selector: 'settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css'],
 })
@@ -26,7 +26,7 @@ export class SettingsComponent implements OnInit {
   }
   setUpForms() {
     this.settingForm = new FormGroup({
-      id: new FormControl(1, Validators.required),
+      id: new FormControl(1),
       name: new FormControl('', Validators.required),
       phone: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),

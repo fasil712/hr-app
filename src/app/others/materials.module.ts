@@ -18,24 +18,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
-  imports: [
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatExpansionModule,
-    MatMenuModule,
-    MatTooltipModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatSortModule,
-    MatSelectModule,
-    MatDialogModule,
-    MatCardModule,
-    MatBadgeModule,
-  ],
   exports: [
     MatToolbarModule,
     MatIconModule,

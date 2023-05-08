@@ -14,9 +14,9 @@
 .mat-icon {
   margin-right: 10px;
 }
-.mdc-list-item {
+/* .mdc-list-item {
   color: #3f51b5;
-}
+} */
 .active {
   background-color: #3f51b5 !important;
   color: white !important;
