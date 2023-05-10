@@ -2,7 +2,10 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
+import { Observable } from 'rxjs';
+import { Employee } from 'src/app/models/employee';
 import { CandidateService } from 'src/app/services/candidate.service';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'candidate-form',
@@ -14,9 +17,12 @@ export class CandidateFormComponent implements OnInit {
   beginningHeader: string = 'Add Cadidate Form';
   actionButton: string = 'Save';
 
+  employeeList: Observable<Employee[]>;
+
   constructor(
     private formBuilder: FormBuilder,
     private candidateService: CandidateService,
+    private employeeService: EmployeeService,
     private toastr: ToastrService,
     @Inject(MAT_DIALOG_DATA) public editCandidate: any,
     private dialogRef: MatDialogRef<CandidateFormComponent>
@@ -29,18 +35,28 @@ export class CandidateFormComponent implements OnInit {
       phone: ['', Validators.required],
       email: ['', Validators.required],
       address: ['', Validators.required],
+      employeeId: ['', Validators.required],
     });
 
     if (this.editCandidate) {
       this.candidatesForm.controls['name'].setValue(this.editCandidate.name);
-      this.candidatesForm.controls['gender'].setValue(this.editCandidate.gender);
+      this.candidatesForm.controls['gender'].setValue(
+        this.editCandidate.gender
+      );
       this.candidatesForm.controls['phone'].setValue(this.editCandidate.phone);
       this.candidatesForm.controls['email'].setValue(this.editCandidate.email);
-      this.candidatesForm.controls['address'].setValue(this.editCandidate.address);
+      this.candidatesForm.controls['address'].setValue(
+        this.editCandidate.address
+      );
+      this.candidatesForm.controls['employeeId'].setValue(
+        this.editCandidate.employeeId
+      );
 
       this.actionButton = 'Update';
       this.beginningHeader = 'Edit Cadidate Form';
     }
+
+    this.employeeList = this.employeeService.getEmployeeApi();
   }
 
   addCadidate(): void {

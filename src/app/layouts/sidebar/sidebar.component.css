@@ -18,3 +18,12 @@
   background-color: #3f51b5 !important;
   color: white !important;
 }
+.phone-email-text {
+  font-size: 14px;
+  cursor: pointer;
+}
+.mat-icon-phone-email {
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+}

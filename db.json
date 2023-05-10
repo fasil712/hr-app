@@ -1,12 +1,13 @@
 {
   "Candidates": [
     {
-      "id": 4,
       "name": "Aster Kebede",
       "gender": "Female",
       "phone": "0987612345",
       "email": "astu@gmail.com",
-      "address": "Addis Ababa"
+      "address": "Addis Ababa",
+      "employeeId": 2,
+      "id": 4
     },
     {
       "name": "Fasil Getie",
@@ -14,6 +15,7 @@
       "phone": "0987654321",
       "email": "fasil@gm.com",
       "address": "Adama",
+      "employeeId": 1,
       "id": 5
     },
     {
@@ -22,6 +24,7 @@
       "phone": "0987654321",
       "email": "mazi@gmail.com",
       "address": "Bahir Dar",
+      "employeeId": 3,
       "id": 6
     }
   ],
@@ -75,10 +78,10 @@
   "Settings": [
     {
       "id": 1,
-      "name": "Creavers Service PLC",
-      "phone": "0987654321",
-      "email": "creavers@gmail.com",
-      "address": "Bole, Gerji",
+      "name": "XOKA IT Solution PLC",
+      "phone": "+251911764416",
+      "email": "xokaitsolution@gmail.com",
+      "address": "Addis Ababa",
       "note": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, similique, facere ab temporibus ipsam dolore asperiores ducimus hic reprehenderit, dolorem corporis praesentium a consequatur repellendus quidem nam quod quos sunt!"
     }
   ],
@@ -106,6 +109,24 @@
       "employeeId": 4,
       "salary": 400,
       "description": "Description"
+    },
+    {
+      "id": 6,
+      "employeeId": 2,
+      "salary": 3,
+      "description": null
+    },
+    {
+      "id": 7,
+      "employeeId": 3,
+      "salary": 5,
+      "description": null
+    },
+    {
+      "id": 8,
+      "employeeId": 2,
+      "salary": 3,
+      "description": null
     }
   ],
   "Departments": [

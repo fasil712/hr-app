@@ -2,11 +2,19 @@
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>{{ companyName }}</span>
+  <span>{{ companyDetail.name }}</span>
   <span class="toolbar-item-spacer"></span>
+
+  <mat-icon class="mat-icon-phone-email">phone</mat-icon>
+  <span class="phone-email-text">{{ companyDetail.phone }}</span>
+
+  <mat-icon class="mat-icon-phone-email">email</mat-icon>
+  <span class="phone-email-text">{{ companyDetail.email }}</span>
+
   <button mat-icon-button matTooltip="Notifications">
     <mat-icon matBadge="5" matBadgeColor="warn">notifications</mat-icon>
   </button>
+
   <button
     mat-icon-button
     matTooltip="My Account"
@@ -14,6 +22,7 @@
   >
     <mat-icon>account_circle</mat-icon>
   </button>
+
   <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
     <button mat-menu-item routerLink="#">
       <mat-icon>person</mat-icon><span>My Account</span>
@@ -41,7 +50,7 @@
   >
     <mat-nav-list>
       <mat-list-item routerLinkActive="active" routerLink="/candidates">
-        <mat-icon  class="sidenav-icon">person</mat-icon>
+        <mat-icon class="sidenav-icon">person</mat-icon>
         <span>Candidate</span>
       </mat-list-item>
       <mat-divider></mat-divider>

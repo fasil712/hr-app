@@ -42,6 +42,7 @@ export class SettingsComponent implements OnInit {
         .subscribe(
           (res) => {
             this.toastr.success('Setting updated succesfully!', 'SUCCESS');
+            this.refresh();
           },
           (error) => {
             this.toastr.error('Error while updating the Setting', 'ERROR');
@@ -50,5 +51,8 @@ export class SettingsComponent implements OnInit {
     } else {
       this.toastr.error('Please check that values in form are valid', 'ERROR');
     }
+  }
+  refresh(): void {
+    window.location.reload();
   }
 }

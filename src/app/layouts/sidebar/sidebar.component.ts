@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Employee } from 'src/app/models/employee';
 import { Setting } from 'src/app/models/setting';
 import { SettingService } from 'src/app/services/setting.service';
 
@@ -9,13 +10,13 @@ import { SettingService } from 'src/app/services/setting.service';
 })
 export class SidebarComponent implements OnInit {
   id: number = 1;
-  companyName: string = '';
+  companyDetail: Setting;
   isExpanded: boolean = true;
 
   constructor(private settingService: SettingService) {}
   ngOnInit(): void {
     this.settingService.getSettingApi(this.id).subscribe((res: Setting) => {
-      this.companyName = res.name;
+      this.companyDetail = res;
     });
   }
 }

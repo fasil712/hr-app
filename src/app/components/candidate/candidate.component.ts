@@ -8,6 +8,8 @@ import { Candidate } from 'src/app/models/candidate';
 import { CandidateService } from 'src/app/services/candidate.service';
 import { MatDialog } from '@angular/material/dialog';
 import { CandidateFormComponent } from './candidate-form/candidate-form.component';
+import { Employee } from 'src/app/models/employee';
+import { EmployeeService } from 'src/app/services/employee.service';
 
 @Component({
   selector: 'app-candidate',
@@ -22,6 +24,7 @@ export class CandidateComponent implements OnInit {
     'phone',
     'email',
     'address',
+    'employeeId',
     'action',
   ];
   dataSource!: MatTableDataSource<Candidate>;
@@ -29,20 +32,24 @@ export class CandidateComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  employeeList: Employee[];
+  employeeNameMap: Map<number, string> = new Map();
   constructor(
     private candidateService: CandidateService,
+    private employeeService: EmployeeService,
     private dialog: MatDialog,
     private toastr: ToastrService
   ) {}
   ngOnInit(): void {
     this.getAllCandidates();
+    this.getEmployeeNameMap();
   }
 
   openDialog() {
     this.dialog
       .open(CandidateFormComponent, {
         width: '30%',
-        height: '85%'
+        height: '85%',
       })
       .afterClosed()
       .subscribe((val) => {
@@ -80,6 +87,18 @@ export class CandidateComponent implements OnInit {
       });
   }
 
+  getEmployeeNameMap() {
+    this.employeeService.getEmployeeApi().subscribe((res) => {
+      this.employeeList = res;
+      for (let i = 0; i < this.employeeList.length; i++) {
+        this.employeeNameMap.set(
+          this.employeeList[i].id,
+          this.employeeList[i].name
+        );
+      }
+    });
+  }
+
   deleteCandidate(id: number) {
     Swal.mixin({
       customClass: {
@@ -113,6 +132,7 @@ export class CandidateComponent implements OnInit {
       }
     });
   }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();

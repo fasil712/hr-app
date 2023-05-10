@@ -42,6 +42,16 @@
         placeholder="Address"
       />
     </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Employee</mat-label>
+      <mat-select formControlName="employeeId" placeholder="Employee">
+        <mat-option
+          *ngFor="let item of employeeList | async"
+          [value]="item.id"
+          >{{ item.name }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
   </form>
 </div>
 <div mat-dialog-action [align]="'end'">
