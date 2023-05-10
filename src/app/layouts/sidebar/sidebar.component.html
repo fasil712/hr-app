@@ -2,14 +2,14 @@
   <button mat-icon-button (click)="sidenav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>{{ companyDetail.name }}</span>
+  <span>{{ companyName }}</span>
   <span class="toolbar-item-spacer"></span>
 
   <mat-icon class="mat-icon-phone-email">phone</mat-icon>
-  <span class="phone-email-text">{{ companyDetail.phone }}</span>
+  <span class="phone-email-text">{{ companyPhone }}</span>
 
   <mat-icon class="mat-icon-phone-email">email</mat-icon>
-  <span class="phone-email-text">{{ companyDetail.email }}</span>
+  <span class="phone-email-text">{{ companyEmail }}</span>
 
   <button mat-icon-button matTooltip="Notifications">
     <mat-icon matBadge="5" matBadgeColor="warn">notifications</mat-icon>

@@ -10,13 +10,17 @@ import { SettingService } from 'src/app/services/setting.service';
 })
 export class SidebarComponent implements OnInit {
   id: number = 1;
-  companyDetail: Setting;
+  companyName: string;
+  companyEmail: string;
+  companyPhone: string;
   isExpanded: boolean = true;
 
   constructor(private settingService: SettingService) {}
   ngOnInit(): void {
     this.settingService.getSettingApi(this.id).subscribe((res: Setting) => {
-      this.companyDetail = res;
+      this.companyName = res.name;
+      this.companyEmail = res.email;
+      this.companyPhone = res.phone;
     });
   }
 }
