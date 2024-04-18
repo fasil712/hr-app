@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Employee } from 'src/app/models/employee';
 import { Setting } from 'src/app/models/setting';
 import { SettingService } from 'src/app/services/setting.service';
 
