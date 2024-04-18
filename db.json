@@ -35,15 +35,6 @@
       "address": "Bole, Gerji",
       "employeeId": 4,
       "id": 7
-    },
-    {
-      "name": "Jhone Doe",
-      "gender": "Male",
-      "phone": "0987654321",
-      "email": "jhonedoe@gmail.com",
-      "address": "Bole, Addis Ababa",
-      "employeeId": 3,
-      "id": 8
     }
   ],
   "Employees": [

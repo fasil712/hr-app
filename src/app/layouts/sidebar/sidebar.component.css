@@ -14,6 +14,9 @@
 .sidenav-icon {
   margin-right: 10px;
 }
+.sidenav-title{
+  margin-bottom: 10px;
+}
 .active {
   background-color: #3f51b5 !important;
   color: white !important;
