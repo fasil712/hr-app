@@ -11,10 +11,11 @@
 .container {
   margin: 10px;
 }
-.sidenav-icon {
-  margin-right: 10px;
+.sidenav-item {
+  justify-content: space-between;
+  align-items: center;
 }
-.sidenav-title{
+.sidenav-title {
   margin-bottom: 10px;
 }
 .active {

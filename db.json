@@ -124,12 +124,6 @@
       "employeeId": 2,
       "salary": 200,
       "description": "ICT Man Salary"
-    },
-    {
-      "id": 7,
-      "employeeId": 3,
-      "salary": 5,
-      "description": null
     }
   ],
   "Departments": [

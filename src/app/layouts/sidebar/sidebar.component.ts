@@ -1,3 +1,4 @@
+import { BooleanInput } from '@angular/cdk/coercion';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Setting } from 'src/app/models/setting';
 import { SettingService } from 'src/app/services/setting.service';
@@ -8,6 +9,10 @@ import { SettingService } from 'src/app/services/setting.service';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
+  badgevisible = false;
+  badgevisibility() {
+    this.badgevisible = true;
+  }
   id: number = 1;
   companyName: string;
   companyEmail: string;
