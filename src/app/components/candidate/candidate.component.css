@@ -14,7 +14,7 @@ table {
   color: #9e9e9e;
 }
 
-.container {
+.container-top {
   display: flex;
   justify-content: space-between;
 }
