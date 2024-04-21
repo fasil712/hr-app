@@ -62,7 +62,7 @@ export class CandidateComponent implements OnInit {
   getAllCandidates() {
     this.candidateService.getCandidateApi().subscribe({
       next: (res: Candidate[]) => {
-        this.dataSource = new MatTableDataSource(res);
+        this.dataSource = new MatTableDataSource(res.reverse());
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
       },

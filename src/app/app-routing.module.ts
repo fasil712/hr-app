@@ -5,12 +5,17 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { SalaryComponent } from './components/salary/salary.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'candidates',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
     path: 'candidates',

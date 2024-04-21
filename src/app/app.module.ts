@@ -22,10 +22,12 @@ import { MaterialsModule } from './others/materials.module';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SalaryComponent } from './components/salary/salary.component';
 import { EmployeeFormComponent } from './components/employee/employee-form/employee-form.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
     SidebarComponent,
     CandidateComponent,
     EmployeeComponent,

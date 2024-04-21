@@ -10,15 +10,6 @@
       "id": 4
     },
     {
-      "name": "Fasil Getie",
-      "gender": "Male",
-      "phone": "0987654321",
-      "email": "fasil@gm.com",
-      "address": "Adama",
-      "employeeId": 1,
-      "id": 5
-    },
-    {
       "name": "Maza Mohamed",
       "gender": "Female",
       "phone": "0987654321",
@@ -28,13 +19,13 @@
       "id": 6
     },
     {
-      "name": "Fasil Getie",
-      "gender": "Female",
-      "phone": "+251930561728",
-      "email": "fasilgetie12@gmail.com",
-      "address": "Bole, Gerji",
-      "employeeId": 4,
-      "id": 7
+      "name": "Jhone Doe",
+      "gender": "Male",
+      "phone": "0987654321",
+      "email": "jhonedoe@gmail.com",
+      "address": "Bole, Addis Ababa",
+      "employeeId": 2,
+      "id": 8
     }
   ],
   "Employees": [
@@ -91,7 +82,7 @@
       "phone": "+251987654321",
       "email": "simplehr@gmail.com",
       "address": "Bole, Addis Ababa",
-      "note": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, similique, facere ab temporibus ipsam dolore asperiores ducimus hic reprehenderit, dolorem corporis praesentium a consequatur repellendus quidem nam quod quos sunt!"
+      "note": "Human Resource Management System"
     }
   ],
   "Salaries": [
