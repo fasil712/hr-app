@@ -28,21 +28,21 @@
       "id": 9
     },
     {
-      "name": "Fasil GETIE Getie",
+      "name": "Dereje Kebede",
       "gender": "Male",
-      "phone": "0930561728",
-      "email": "fasilgetie12@gmail.com",
-      "address": "Bole, Gerji",
-      "employeeId": 3,
+      "phone": "0987651234",
+      "email": "dereje@gmail.com",
+      "address": "Adama, Ethiopia",
+      "employeeId": 1,
       "id": 10
     },
     {
-      "name": "Fasil GETIE Getie",
-      "gender": "Male",
-      "phone": "0930561728",
-      "email": "fasilgetie12@gmail.com",
-      "address": "Bole, Gerji",
-      "employeeId": 4,
+      "name": "Rekik Maylef",
+      "gender": "Female",
+      "phone": "0987654321",
+      "email": "rekik@gmail.com",
+      "address": "Addis Ababa, Ethiopia",
+      "employeeId": 2,
       "id": 11
     }
   ],
