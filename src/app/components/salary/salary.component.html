@@ -25,16 +25,12 @@
           <span matTextPrefix>$&nbsp;</span>
           <span matTextSuffix>.00</span>
         </mat-form-field>
-        <!-- <mat-form-field appearance="outline">
-          <mat-label>Salary</mat-label>
-          <input matInput formControlName="salary" type="number" min="0" />
-        </mat-form-field> -->
         <mat-form-field appearance="outline">
           <mat-label>Description</mat-label>
           <textarea matInput formControlName="description"></textarea>
         </mat-form-field>
         <div [align]="'end'">
-          <button type="submit" mat-raised-button color="accent">
+          <button type="submit" mat-raised-button color="primary">
             {{ buttonText }}
           </button>
           <button

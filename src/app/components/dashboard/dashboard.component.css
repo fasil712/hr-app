@@ -1,7 +1,21 @@
-.card{
-    width: 100%;
-    margin-right: 20px;
+.container {
+  display: flex;
+  justify-content: space-between;
 }
-.dashboard-cards{
-    justify-content: space-between;
+.card-emp {
+  width: 100%;
+  background: #3f51b5;
+  margin-right: 20px;
+  color: white;
+}
+.card-cad {
+  margin-right: 20px;
+  width: 100%;
+  background: #00db74;
+  color: white;
+}
+.card-dept {
+  width: 100%;
+  background: #ff8621;
+  color: white;
 }

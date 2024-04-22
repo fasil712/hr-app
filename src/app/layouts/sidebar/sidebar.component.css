@@ -19,8 +19,11 @@
   margin-bottom: 10px;
 }
 .active {
-  background-color: #3f51b5;
+  background: #3f51b5;
+}
+.active button {
   color: white;
+  justify-content: center;
 }
 .phone-email-text {
   font-size: 14px;

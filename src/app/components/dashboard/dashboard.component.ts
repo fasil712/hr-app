@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CandidateService } from 'src/app/services/candidate.service';
 import { DepartmentService } from 'src/app/services/department.service';
 import { EmployeeService } from 'src/app/services/employee.service';
@@ -17,6 +18,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private employeeService: EmployeeService,
     private candidateService: CandidateService,
+    private router: Router,
     private departmentService: DepartmentService
   ) {}
 
@@ -38,14 +40,14 @@ export class DashboardComponent implements OnInit {
   }
 
   viewEmployees() {
-    // navigate to employees page
+    this.router.navigate(['/employees']);
   }
 
   viewCandidates() {
-    // navigate to candidates page
+    this.router.navigate(['/candidates']);
   }
-
+  
   viewDepartments() {
-    // navigate to departments page
+    this.router.navigate(['/departments']);
   }
 }
