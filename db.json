@@ -17,6 +17,33 @@
       "address": "Bole, Addis Ababa",
       "employeeId": 2,
       "id": 8
+    },
+    {
+      "name": "Fasil Getie",
+      "gender": "Male",
+      "phone": "0930561728",
+      "email": "fasilgetie12@gmail.com",
+      "address": "Bole, Gerji",
+      "employeeId": 2,
+      "id": 9
+    },
+    {
+      "name": "Fasil GETIE Getie",
+      "gender": "Male",
+      "phone": "0930561728",
+      "email": "fasilgetie12@gmail.com",
+      "address": "Bole, Gerji",
+      "employeeId": 3,
+      "id": 10
+    },
+    {
+      "name": "Fasil GETIE Getie",
+      "gender": "Male",
+      "phone": "0930561728",
+      "email": "fasilgetie12@gmail.com",
+      "address": "Bole, Gerji",
+      "employeeId": 4,
+      "id": 11
     }
   ],
   "Employees": [

@@ -32,7 +32,9 @@ export class DashboardComponent implements OnInit {
       .subscribe((count) => (this.departmentsCount = count.length));
     this.candidateService
       .getCandidateApi()
-      .subscribe((candidates) => (this.recentCandidates = candidates));
+      .subscribe(
+        (candidates) => (this.recentCandidates = candidates.reverse().splice(0, 4))
+      );
   }
 
   viewEmployees() {
