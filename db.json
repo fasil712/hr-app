@@ -120,13 +120,13 @@
       "id": 3,
       "employeeId": 4,
       "salary": 234,
-      "description": null
+      "description": "Front Desk Salary"
     },
     {
       "id": 4,
       "employeeId": 1,
       "salary": 2342,
-      "description": null
+      "description": "HR's Salary"
     }
   ],
   "Departments": [
