@@ -1,15 +1,6 @@
 {
   "Candidates": [
     {
-      "name": "Aster Kebede",
-      "gender": "Female",
-      "phone": "0987612345",
-      "email": "astu@gmail.com",
-      "address": "Addis Ababa",
-      "employeeId": 2,
-      "id": 4
-    },
-    {
       "name": "Maza Mohamed",
       "gender": "Female",
       "phone": "0987654321",
@@ -100,21 +91,15 @@
     },
     {
       "id": 3,
-      "employeeId": 3,
-      "salary": 765,
-      "description": "Secretaries Salary"
+      "employeeId": 4,
+      "salary": 234,
+      "description": null
     },
     {
       "id": 4,
-      "employeeId": 4,
-      "salary": 400,
-      "description": "Description"
-    },
-    {
-      "id": 6,
-      "employeeId": 2,
-      "salary": 200,
-      "description": "ICT Man Salary"
+      "employeeId": 1,
+      "salary": 2342,
+      "description": null
     }
   ],
   "Departments": [

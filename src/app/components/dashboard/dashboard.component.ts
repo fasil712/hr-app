@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
       .subscribe((count) => (this.candidatesCount = count.length));
     this.departmentService
       .getDepartmentApi()
-      .subscribe((count) => (this.departmentsCount = count));
+      .subscribe((count) => (this.departmentsCount = count.length));
     this.candidateService
       .getCandidateApi()
       .subscribe((candidates) => (this.recentCandidates = candidates));
