@@ -50,27 +50,39 @@
   >
     <mat-nav-list>
       <mat-list-item routerLinkActive="active" routerLink="/dashboard">
-        <button mat-button><mat-icon>home</mat-icon>Dashboard</button>
+        <button mat-button matListItemTitle>
+          <mat-icon matListItemIcon>home</mat-icon>Dashboard
+        </button>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLinkActive="active" routerLink="/candidates">
-        <button mat-button><mat-icon>person</mat-icon>Candidate</button>
+        <button mat-button matListItemTitle>
+          <mat-icon matListItemIcon>person</mat-icon>Candidate
+        </button>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLinkActive="active" routerLink="/employees">
-        <button mat-button><mat-icon>badge</mat-icon>Employee</button>
+        <button mat-button matListItemTitle>
+          <mat-icon matListItemIcon>badge</mat-icon>Employee
+        </button>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLinkActive="active" routerLink="/departments">
-        <button mat-button><mat-icon>list_alt</mat-icon>Department</button>
+        <button mat-button matListItemTitle>
+          <mat-icon matListItemIcon>list_alt</mat-icon>Department
+        </button>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLinkActive="active" routerLink="/salary">
-        <button mat-button><mat-icon>paid</mat-icon>Salary</button>
+        <button mat-button matListItemTitle>
+          <mat-icon matListItemIcon>paid</mat-icon>Salary
+        </button>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLinkActive="active" routerLink="/settings">
-        <button mat-button><mat-icon>settings</mat-icon>Settings</button>
+        <button mat-button matListItemTitle>
+          <mat-icon matListItemIcon>settings</mat-icon>Settings
+        </button>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
