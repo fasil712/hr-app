@@ -48,15 +48,6 @@
   ],
   "Employees": [
     {
-      "name": "Fasil Getie",
-      "gender": "Male",
-      "phone": "0987654321",
-      "email": "fasil@gmail.com",
-      "address": "Bole, Gerji",
-      "departmentId": 2,
-      "id": 1
-    },
-    {
       "name": "Abebe Dereje",
       "gender": "Male",
       "phone": "0987661234",
@@ -64,15 +55,6 @@
       "address": "Addis Ababa",
       "departmentId": 5,
       "id": 2
-    },
-    {
-      "name": "Hana Sisay",
-      "gender": "Female",
-      "phone": "0987623455",
-      "email": "hana@gmail.com",
-      "address": "Bole, Gerji",
-      "departmentId": 4,
-      "id": 3
     },
     {
       "name": "Abay Molla",
@@ -91,14 +73,32 @@
       "address": "Bole, Gerji",
       "departmentId": 1,
       "id": 5
+    },
+    {
+      "name": "Jhone Fee Doe",
+      "gender": "Male",
+      "phone": "0987654321",
+      "email": "jhonedoe@gmail.com",
+      "address": "Bole, Addis Ababa",
+      "departmentId": 4,
+      "id": 6
+    },
+    {
+      "name": "Fasil",
+      "gender": "Female",
+      "phone": "0930561728",
+      "email": "fasilti12@gmail.com",
+      "address": "Bole, Gerji",
+      "departmentId": 4,
+      "id": 7
     }
   ],
   "Settings": [
     {
       "id": 1,
-      "name": "HR Application",
-      "phone": "+251987654321",
-      "email": "simplehr@gmail.com",
+      "name": "HR App",
+      "phone": "+251234345456",
+      "email": "hr@gmail.com",
       "address": "Bole, Addis Ababa",
       "note": "Human Resource Management System"
     }
@@ -106,7 +106,7 @@
   "Salaries": [
     {
       "id": 1,
-      "employeeId": 1,
+      "employeeId": 4,
       "salary": 1230,
       "description": "Developers Salary"
     },
@@ -118,13 +118,13 @@
     },
     {
       "id": 3,
-      "employeeId": 4,
+      "employeeId": 5,
       "salary": 234,
       "description": "Front Desk Salary"
     },
     {
       "id": 4,
-      "employeeId": 1,
+      "employeeId": 6,
       "salary": 2342,
       "description": "HR's Salary"
     }

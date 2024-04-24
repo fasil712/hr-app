@@ -35,7 +35,6 @@ export class SalaryComponent implements OnInit {
 
   employeeList: Employee[] = [];
   employeeListMap: Map<number, string> = new Map();
-
   constructor(
     private salaryService: SalaryService,
     private employeeService: EmployeeService,
@@ -46,7 +45,6 @@ export class SalaryComponent implements OnInit {
     this.setupFormGroups();
     this.getEmployees();
   }
-
   setupFormGroups() {
     this.buttonText = 'Save';
     this.addEditOperation = AddEditOperation.add;
@@ -74,7 +72,7 @@ export class SalaryComponent implements OnInit {
       },
     });
   }
-  
+
   getEmployees() {
     this.employeeService.getEmployeeApi().subscribe((res: Employee[]) => {
       this.employeeList = res;
@@ -90,6 +88,17 @@ export class SalaryComponent implements OnInit {
   submitSalary() {
     this.submitted = true;
     if (this.salaryForm.invalid) {
+      return;
+    }
+    if (
+      this.dataSource.data.some(
+        (salary) => salary.employeeId === this.salaryForm.value.employeeId
+      )
+    ) {
+      this.toastr.error(
+        'Employee ID already exists. Please select a unique employee.',
+        'ERROR'
+      );
       return;
     }
     switch (this.addEditOperation) {

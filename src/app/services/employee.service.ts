@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, map, Observable, of, throwError } from 'rxjs';
 import { ApiPaths } from '../others/api-paths.enum';
 import { Employee } from '../models/employee';
 import { environment } from 'src/environments/environment';
@@ -41,6 +41,19 @@ export class EmployeeService {
     return this.httpClient
       .delete<Employee[]>(this.BASE_URL + ApiPaths.EmployeeEndpoint + `/${id}`)
       .pipe(catchError(this.errorHandler));
+  }
+
+  checkUniqueEmailApi(email: string): Observable<boolean> {
+    return this.httpClient
+      .get<Employee[]>(this.BASE_URL + ApiPaths.EmployeeEndpoint)
+      .pipe(
+        map((employees) => {
+          const isUnique = !employees.some(
+            (employee) => employee.email === email
+          );
+          return isUnique;
+        })
+      );
   }
 
   errorHandler(error: any) {

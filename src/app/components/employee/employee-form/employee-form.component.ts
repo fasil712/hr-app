@@ -1,8 +1,13 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ToastrService } from 'ngx-toastr';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Department } from 'src/app/models/department';
 import { DepartmentService } from 'src/app/services/department.service';
 import { EmployeeService } from 'src/app/services/employee.service';
@@ -30,10 +35,21 @@ export class EmployeeFormComponent implements OnInit {
   ngOnInit(): void {
     this.departmentList = this.departmentService.getDepartmentApi();
     this.employeeForm = this.formBuilder.group({
-      name: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(30)])],
+      name: [
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(30),
+        ]),
+      ],
       gender: ['', Validators.required],
       phone: ['', Validators.required],
-      email: ['', Validators.compose([Validators.required, Validators.email])],
+      email: [
+        '',
+        Validators.compose([Validators.required, Validators.email]),
+        uniqueEmailValidator(this.employeeService),
+      ],
       address: ['', Validators.required],
       departmentId: ['', Validators.required],
     });
@@ -94,3 +110,14 @@ export class EmployeeFormComponent implements OnInit {
     }
   }
 }
+
+const uniqueEmailValidator = (employeeService: EmployeeService) => {
+  return (control: FormControl) => {
+    const email = control.value;
+    return employeeService.checkUniqueEmailApi(email).pipe(
+      map((res: boolean) => {
+        return res ? null : { emailExists: true };
+      })
+    );
+  };
+};
