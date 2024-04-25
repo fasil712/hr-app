@@ -91,14 +91,23 @@
       "address": "Bole, Gerji",
       "departmentId": 4,
       "id": 7
+    },
+    {
+      "name": "Fasil Getie",
+      "gender": "Female",
+      "phone": "0930561728",
+      "email": "fasilgetie1@gmail.com",
+      "address": "Bole, Gerji",
+      "departmentId": 2,
+      "id": 8
     }
   ],
   "Settings": [
     {
       "id": 1,
-      "name": "HR App",
-      "phone": "+251234345456",
-      "email": "hr@gmail.com",
+      "name": "HR Application",
+      "phone": "0987654321",
+      "email": "simplehr@gmail.com",
       "address": "Bole, Addis Ababa",
       "note": "Human Resource Management System"
     }
@@ -127,6 +136,12 @@
       "employeeId": 6,
       "salary": 2342,
       "description": "HR's Salary"
+    },
+    {
+      "id": 5,
+      "employeeId": 8,
+      "salary": 3220,
+      "description": "Demo Salary"
     }
   ],
   "Departments": [
